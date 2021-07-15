@@ -1,0 +1,37 @@
+********************************
+=MONTE CARLO MOLECULAR DYNAMICS=
+********************************
+
+Folder contains
+- Code files
+	* Monte_Carlo_NVT.cpp 	// Simulation code, Monte Carlo evolution of a molecular
+				// system. Output are files containing internal energy,
+				// pressure and g(r) (step by step and final average)
+				// one should first have a thermalisation period with 
+				// few steps (~10^3 steps) to reach equilibrium, then
+				// a long simulation (~10^5 steps) to obtain final data
+				// Modified to receive instructions from command line
+
+	* random.cpp 		// Random number generator (for acceptance of steps)
+
+- input.dat  			// Input file that contains all initial data
+				// NB: before starting content from one of the 
+				// other input files needs to be copied into this one
+	* input.solid		// Files containing specific data for different states
+	* input.liquid 		// of matter (eg: temperature, density and r_cut)
+	* input.gas
+
+- config.0			// Starting configuration for evolution
+				// Before first launch, you should copy config.fcc
+				// afterwards programme copies previous config.final
+
+- launcher.sh			// Launches full simulation (start + thermalisation + 
+				// long simulation) for all three systems in sequence. 
+				// Needs number of thermalisation steps, copies input
+				// files. Block size and steps per block need to be 
+				// changed manually for test run or actual run.
+				// VERY LONG. Beware. 
+
+- clean.sh			// Removes all txt files and resets final configuration
+
+-frames				// Should contain the frames (.xyz) of intermediate steps

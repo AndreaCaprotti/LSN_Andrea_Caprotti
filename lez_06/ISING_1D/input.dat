@@ -1,0 +1,23 @@
+0.5
+50
+1.0
+0.0
+1
+200
+5000
+1
+1
+1.
+0
+
+  ReadInput >> temp;
+  ReadInput >> nspin;
+  ReadInput >> J;
+  ReadInput >> h;
+  ReadInput >> metro;
+  ReadInput >> nblk;
+  ReadInput >> nstep;
+  ReadInput >> restart_bool;
+  ReadInput >> measure_mode;
+  ReadInput >> bias;
+  ReadInput >> therm_no;

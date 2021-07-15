@@ -1,0 +1,23 @@
+0.8
+108
+1.1
+2.2
+0.0005
+100
+1000
+100
+1
+1
+0
+
+  ReadInput >> temp;
+  ReadInput >> npart;
+  ReadInput >> rho;
+  ReadInput >> rcut;
+  ReadInput >> delta;
+  ReadInput >> nstep;
+  ReadInput >> iprint;
+  ReadInput >> nblocks;
+  ReadInput >> restart;
+  ReadInput >> measure_mode;
+  ReadInput >> system_type;

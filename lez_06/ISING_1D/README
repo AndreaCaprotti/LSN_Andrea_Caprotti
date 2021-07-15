@@ -1,0 +1,29 @@
+*****************************
+======ISING 1D SIMULATOR=====
+*****************************
+
+Folder contains
+- Code files
+	* Monte_Carlo_ISING_1D.cpp // Simulation code, can be used for Metropolis or Gibbs 
+				   // works with data from input file or as arguments
+				   // from command line: progressive step for temp.,
+				   // total temperature steps, restart command,
+				   // measure command, bias for generating starting conf.
+				   // number of thermalisation steps and meaure mode.
+
+	* random.cpp 		   // Random number generaor (for acceptance of steps)
+	
+	* block_stat.h		   // Library for average estimation of vectors
+
+- input.dat  			   // Input file that contains all initial data 
+
+- launcher.sh			   // Script that launches in sequence simulation for 
+				   // different temperatures; receives number of temps 
+				   // between 0.5 and 2 and equilibration number;
+				   // passes to programme restart_bool and measure_bool
+
+- launcher_sus.sh		   // Script that launches sequence varying bias and therm_no
+				   // optimised for search of optimal parameters for
+				   // magnetic susceptibiilty
+
+- clean.sh			   // Removes all txt files and resets final configuration
