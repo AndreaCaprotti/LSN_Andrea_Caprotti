@@ -17,7 +17,7 @@ _/    _/  _/_/_/  _/_/_/_/ email: Davide.Galli@unimi.it
 #include "Monte_Carlo_NVT.h"
 
 #define PRINT           // flags to lighten the output files
-//#define OUT_AVE         // averages only on moderately long sims
+#define OUT_AVE         // averages only on moderately long sims
 #define G_of_R          // g(r) computed only when needed
 
 using namespace std;
@@ -106,7 +106,7 @@ void Input(char* argv[])
       long_ = atoi(argv[5]);
   }
     
- if (long_==1)
+ if (long_==1)      // to distinguish long simulations to
      file_name = file_name + ".long";
     
 //Prepare arrays for measurements
@@ -314,8 +314,8 @@ void Averages(int iblk){ //Print results for current block
     ofstream Gofr, Gave, Epot, Pres;
     const int wd=12;
     
-    Epot.open("output.epot."+file_name,ios::app);
-    Pres.open("output.pres."+file_name,ios::app);
+    Epot.open("output.epot."+file_name+".txt",ios::app);
+    Pres.open("output.pres."+file_name+".txt",ios::app);
 
     stima_pot = blk_av[iv]/blk_norm/(double)npart + vtail; //Potential energy
     glob_av[iv] += stima_pot;
@@ -344,8 +344,8 @@ void Averages(int iblk){ //Print results for current block
     Gave.open("output.gave."+file_name+".txt",std::ios::app);
     //g(r) progressive average
     for(int i=igofr; i < n_props; ++i){
-        r = bin_size/2 + i*bin_size;    // bin representative
-        gdir = blk_av[i]/blk_norm;
+        r = bin_size/2 + (i+3)*bin_size;    // bin representative
+        gdir = blk_av[i]/blk_norm;          // incrememented to be same as MD code
         glob_av[i] += gdir;
         glob_av2[i] += gdir*gdir;
         err_gdir = Error(glob_av[i],glob_av2[i],iblk);

@@ -11,8 +11,10 @@ Folder contains
 				// few steps (~10^3 steps) to reach equilibrium, then
 				// a long simulation (~10^5 steps) to obtain final data
 				// Modified to receive instructions from command line
+				// such as filename, restart bool option and "long" mode option
+				// Needs "random.h" library to compile
 
-	* random.cpp 		// Random number generator (for acceptance of steps)
+	* Monte_Carlo_NVT.h	// Contains constants and function definition
 
 - input.dat  			// Input file that contains all initial data
 				// NB: before starting content from one of the 

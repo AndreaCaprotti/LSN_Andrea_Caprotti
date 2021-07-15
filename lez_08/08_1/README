@@ -1,0 +1,20 @@
+********************************
+1-D QUANTM GROUND STATE ESTIMATE 
+********************************
+
+Folder contains
+- Code files
+	* 08_1.cpp 		// Simulation code, samples using Metropolis algorithm
+				// the quantum approximate ground state wave function of
+				// a particle in a 1D quartic potential.
+				// Saves positions visited during the walk and progressive
+				// energy average. Needs "block_stat.h" library to estimate
+				// block average and "random_walk.h" library to implement the 
+				// random walk with Metropolis acceptance of moves
+				// Can receive \mu and \sigma parameters from command line
+
+
+- launcher.sh			// Launches subsequent simulations in which passes from command 
+				// line different values of \mu and \sigma parameters for the 
+				// wave function. Needs starting and ending value of both \mu and 
+				// \sigma with the number of intermediate steps to make.

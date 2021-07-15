@@ -1,0 +1,17 @@
+********************************
+======= sA for TS problem ======
+********************************
+
+Folder contains
+- Code files
+	* 10_1.cpp 		// Simulation code, finds a solution for the Travelling Salesman
+				// problem using a Simulated Annealing Algorithm. Essentially an 
+				// adapted version of the genetic algorithm, uses one single 
+				// Chromosome from "chromosome.h", varied using only mutations.
+				// Can receive inverse of temperature from command line for 
+				// acceptance probability and adapts number of steps as \beta^(3/2)
+				// Final route appended to file with temperature. Also needs 
+				// "random.h" library to generate random variables 
+
+- launcher.sh			// Launches subsequent simulations in which passes from command 
+				// line the temperature; final data is gathered in same data file 

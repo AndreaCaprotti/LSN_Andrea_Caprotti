@@ -2,7 +2,7 @@
 //      Let's start over.
 //
 
-#include "random.h"
+#include "../../libraries/random.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -347,11 +347,11 @@ void Measure(void){ //Properties measurement
     
 #ifndef G_of_R
     if (!measure_mode){
-        Epot.open("data_files/output_epot."+sys_type+".txt",std::ios::app);
-        Ekin.open("data_files/output_ekin."+sys_type+".txt",std::ios::app);
-        Temp.open("data_files/output_temp."+sys_type+".txt",std::ios::app);
-        Etot.open("data_files/output_etot."+sys_type+".txt",std::ios::app);
-        Pres.open("data_files/output_pres."+sys_type+".txt",std::ios::app);
+        Epot.open("output_epot."+sys_type+".txt",std::ios::app);
+        Ekin.open("output_ekin."+sys_type+".txt",std::ios::app);
+        Temp.open("output_temp."+sys_type+".txt",std::ios::app);
+        Etot.open("output_etot."+sys_type+".txt",std::ios::app);
+        Pres.open("output_pres."+sys_type+".txt",std::ios::app);
         Epot << walker[iv]  << std::endl;
         Ekin << walker[ik]  << std::endl;
         Temp << walker[it]  << std::endl;
@@ -393,7 +393,7 @@ void Averages(int iblk){
     double val, err;
     
     for (ind = 0; ind < igofr; ++ind){
-        Output.open("data_files/ave_"+file_name[ind]+"."+sys_type+".txt", std::ios::app);
+        Output.open("ave_"+file_name[ind]+"."+sys_type+".txt", std::ios::app);
         val = block_avg[ind]/(double)blk_len;
         glob_av[ind] += val;
         glob_av2[ind] += val*val;

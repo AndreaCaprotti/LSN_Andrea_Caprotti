@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall -O3 --std=c++11
 
 LIB_PATH:= ../../libraries/
-INCLUDES:= $(LIB_PATH)block_stat.h 
+INCLUDES:= $(LIB_PATH)random.h 
 
 Monte_Carlo_ISING_1D.exe : Monte_Carlo_ISING_1D.o random.o
 	$(CC) random.o Monte_Carlo_ISING_1D.o -o Monte_Carlo_ISING_1D.exe

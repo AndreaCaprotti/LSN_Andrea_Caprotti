@@ -18,8 +18,8 @@
 #include <fstream>
 #include <vector>
 #include <cmath>
-#include "random_walk.h"
-#include "block_stat.h"
+#include "../../libraries/random_walk.h"
+#include "../../libraries/block_stat.h"
 
 // density probability for wavefunction
 double square_wf (double x, double mu, double s_2){

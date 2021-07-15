@@ -1,12 +1,11 @@
-0.8
+1.2
 108
-1.1
-2.2
-0.12
-1000
+0.05
+5.0
+6
 100
+1000
 1
-0
 
   ReadInput >> temp;
   ReadInput >> npart;
@@ -16,4 +15,3 @@
   ReadInput >> nblk;
   ReadInput >> nstep;
   ReadInput >> restart;
-  ReadInput >> long;

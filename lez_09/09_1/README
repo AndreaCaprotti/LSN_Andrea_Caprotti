@@ -1,0 +1,18 @@
+********************************
+======= GA for TS problem ======
+********************************
+
+Folder contains
+- Code files
+	* 09_1.cpp 		// Simulation code, finds a solution for the Travelling Salesman
+				// problem using a Genetic Algorithm. Can produce a number of 
+				// random cities places on a unit circumference or inside a square.
+				// Needs "chromosome.h" library, which implements the essentials
+				// for the genetic algorithm, and "random.h" to produce random
+				// elements. Can receive acceptance probabilities for different
+				// possible mutations from command line
+
+- launcher.sh			// Launches subsequent simulations in which passes from command 
+				// line different values acceptance probabilities. Can be easily 
+				// modified to pass one, two or all three acceptance probabilities 
+				// at a time

@@ -8,8 +8,8 @@
 #ifndef _10_2_hpp
 #define _10_2_hpp
 
-#include "random.h"
-#include "chromosome.h"
+#include "../../libraries/random.h"
+#include "../../libraries/chromosome.h"
 
 struct City{
     double x,y;     // coordinates

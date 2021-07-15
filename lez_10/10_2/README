@@ -1,0 +1,12 @@
+********************************
+======= MPI for TS problem ======
+********************************
+
+Folder contains
+- Code files
+	* 10_2.cpp 		// Simulation code, adaptation of 09_1.cpp code, which adds the 
+				// possibility of exchanging a number of the best routes with other 
+				// 3 parallel executions of the same code to speed up the 
+				// execution. Needs "random.h", "chromosome.h" and MPI to correctly 
+				// execute. Compiled using mpic++. Also needs Primes datafile to 
+				// start off different random sequences.

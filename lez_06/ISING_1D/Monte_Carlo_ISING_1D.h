@@ -13,8 +13,8 @@ _/    _/  _/_/_/  _/_/_/_/ email: Davide.Galli@unimi.it
 
 //Random numbers
 #include <string>
-#include "block_stat.h"
-#include "random.h"
+#include "../../libraries/block_stat.h"
+#include "../../libraries/random.h"
 int seed[4];
 Random rnd;
 

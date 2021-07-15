@@ -9,8 +9,8 @@
 #define _0_1_hpp
 
 #include <vector>
-#include "random.h"
-#include "chromosome.h"
+#include "../../libraries/random.h"
+#include "../../libraries/chromosome.h"
 
 struct City{
     double x,y;     // coordinates
